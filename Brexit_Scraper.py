@@ -80,12 +80,21 @@ no_deal_list = [' '.join( item[0].split() ) for item in tokens if re.search(r"no
 mays_deal_list = [' '.join( item[0].split() ) for item in tokens if re.search(r"may's\s?deal",item[0],re.IGNORECASE) ]
 withdrawal_list = [' '.join( item[0].split() ) for item in tokens if re.search(r"withdrawal\s?agreement",item[0],re.IGNORECASE) ]
 referendum_list = [' '.join( item[0].split() ) for item in tokens if re.search(r"second\s?referendum",item[0],re.IGNORECASE) ]
+
 for listItem in no_deal_list:
     print( listItem +'\n')
 for listItem in referendum_list:
     print( listItem +'\n')
+for listItem in mays_deal_list:
+    print( listItem +'\n')
+for listItem in withdrawal_list:
+    print( listItem +'\n')
+
 print( "Total senteces containing \" no deal \": " , len(no_deal_list) )
 print( "Total senteces containing \" may's deal \": " , len(mays_deal_list) )
 print( "Total senteces containing \" withdrawal deal \": " , len(withdrawal_list) )
 print( "Total senteces containing \" second referendum \": " , len(referendum_list) )
+
+print( "Total senteces containing \" mays deal \": " , len(mays_deal_list) )
+print( "Total senteces containing \" withdrawal agreement \": " , len(withdrawal_list) )
 # print(  )
